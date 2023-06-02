@@ -1,0 +1,24 @@
+### secrets ###
+.env
+
+### Node ###
+node_modules
+package-lock.json
+
+### vs code ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+.ionide
+
+### mac ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### DO Functions ###
+.deployed
+lib/

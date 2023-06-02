@@ -1,0 +1,18 @@
+packages:
+    - name: ipc
+      functions:
+        - name: tracking-forwarder
+          runtime: nodejs:18
+          limits:
+            timeout: 60000
+          main: "main"
+          environment:
+            REQUEST_AUTH_TOKEN: "${REQUEST_AUTH_TOKEN}"
+            TRACKING_SENDER_DEVICE_IMEI: "${TRACKING_SENDER_DEVICE_IMEI}"
+            TRACKING_SENDER_INREACH_ADDRESS: "${TRACKING_SENDER_INREACH_ADDRESS}"
+            TRACKING_RECEIVER_DEVICE_IMEI: "${TRACKING_RECEIVER_DEVICE_IMEI}"
+            GARMIN_INBOUND_API_HOST: "${GARMIN_INBOUND_API_HOST}"
+            GARMIN_INBOUND_API_USER: "${GARMIN_INBOUND_API_USER}"
+            GARMIN_INBOUND_API_PASS: "${GARMIN_INBOUND_API_PASS}"
+            BETTERSTACK_LOGS_HOST: "${BETTERSTACK_LOGS_HOST}"
+            BETTERSTACK_LOGS_BEARER_TOKEN: "${BETTERSTACK_LOGS_BEARER_TOKEN}"
